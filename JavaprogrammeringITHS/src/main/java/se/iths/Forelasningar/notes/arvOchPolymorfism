@@ -1,0 +1,43 @@
+Alla klasser du skapar ärver från Object();
+
+Circle circle = new Circle(); Object object = new Circle(); om circle ärver från Object(vilket det alltid gör)
+Circle circle kommer åt allt från Object klassen. Object klassen kommer inte åt allt från circle utan att du typecastar den till circle.
+(Circle) object, då kan du komma åt circle variabler/metoder från Objekt variabel om du initierat den som en circle;
+
+if(object instanceof Circle c){
+System.out.println(c.radius); } Då typecastar du objectet som en circle  med en variabel c som du kan använda inom omfånget av ifsatsen.
+
+Polymorfism är då t.ex Object object = New Circle(). Circle cirle = new Object();
+Man kan ge variabler av en typ ett objekt av en annan typ så länge som det finns arv mellan dom.
+
+Klassen object har metoderna toString(), equals() och hashCode() (med mera, men dessa är de mest intressanta);
+Alla metoder som inte är final kan overridas. Lägg till final om du inte vill att man ska kunna göra en override på en metod du gjort, användbart i arv.
+Kan göra klasser till final om man inte vill att man ska kunna ärva klassen. String klassen är final för att man inte ska kunna bygga vidare på den.
+
+Overridade metoder tas reda på när koden körs.
+
+Alltid overrida hashCode() om du overridar equals()
+Går att generera automatiskt på samma sätt som man genererar contructors/gettersetters
+Object[] values går bara att skicka in en array, Object... values skapar en array åt dig med värdena inskickade i parametrarna
+Låter en slippa skapa en array för att skicka in värden.
+
+Enligt List.of så anser utvecklarna av Java att det är bättre att göra overloadade metoder med upp till 10 parametrar med Object istället för att göra Object... values;
+(OBS behöver inte var Object, det är bara exempel i detta fallet)
+
+En equals() metod måste vara symmetrisk, om Object 1equalsObject 2 är true så är Object 2 equals Object1
+Den måste vara konsekvent, samma objekt inskickade till equals måste alltid ge samma resultat.
+Ett objekt equals med NUll ska alltid ge false och aldrig ge NullPointerException
+Om det inte är samma objekt så skickas alltid false också.
+Om det är samma objekt och inget är Null så typeCastas objektet till ditt klassObjekt och skickar det till Object.equals();
+Equals tar alltid emot en Object referens i parametrarna för att equals ligger i Object-klassen och inte vet vad för nya klasser som skapas.
+Detta är också varför den behöver typeCastas.
+Behöver Overridas på varje ny klass du skapar även om du ärver från en tidigare klass som redan har equals();
+Man kan lägga till fler fält i equals() om man vill jämföra fler fält samtidigt. t.ex Super().variabel.equals(variabel);
+
+För att förhindra att man skickar in null till klassokjekt med referens till annan klassobjekt så kan man skapa en ny klass som representerar att det inte ska vara ett objekt.
+T.ex om en employee(som extendar person) behöver ha en chef inskickad till sin konstruktor, men den ska inte ha en boss.
+Skapa en NoBoss klass som extendar person som ger ett värde till den parameter som behövs och skicka in detta objektet till employee.
+Förhindrar inte att skicka in null till en employee men det ger ett anlternativ.
+Kan också kolla om det finns en instans av NoBoss i employee.
+
+Går inte att overrida statiska metoder.

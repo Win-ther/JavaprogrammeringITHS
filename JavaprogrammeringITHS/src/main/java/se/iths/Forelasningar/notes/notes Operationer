@@ -1,0 +1,12 @@
+y = x++; //Ger y = x och x = x+1;
+y = ++x; //Ger y = x+1 och x = x+1;
+Det spelar alltså roll vilken sida som operatorn ++ ligger på av variabeln.
+
+&& //Endast true om båda sidor av operationen är true. AND.
+|| // Är true om någon av sidor av operationen är true. OR.
+&& och || // Är Shortcircuted, behöver endast testa en av sidorna
+^ // Endast true om exklusivt en av de två sidorna är true. Inte shortcircuted då den måste testa båda sidor.
+
+= //Är tilldelningsoperatorn och har lägst prioritet av alla andra operators.
+++(postfix) > ++(prefix) // Postfix har största prio och tas före Prefix.
+Beräkningsordning enligt matte, () först. */% är samma och utförs då från vänster till höger.

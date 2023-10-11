@@ -1,0 +1,12 @@
+stream().metodnamn som returnerar mer streams = Intermediate operations
+
+.peek( lambda utryck för uskrift) används endast för debugg och kommer alltid bara passera till nästa del.
+
+I debugmode med breakpoint på streamensstart, tre prickar, Trace Current Stream Chain - Se hela streamen och alla filter/we du lagt på den
+bra för att debugga.
+
+Streams är Lazy - Man fördröjer skapandet av objekt så länge som möjligt för att se till så att man faktiskt behöver skapa objekten.
+
+Flatmap = Gör om en stream av listor till en stream av objekten som ligger i listorna.
+
+Prioritera filter tidigt i sekvenser.

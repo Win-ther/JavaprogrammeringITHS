@@ -1,0 +1,30 @@
+Använd alltid interfaces som deklarationstyp, för att lätta kunna byta mellan olika typer som implementerar interfacet.
+T.ex. Vanligaste är: List<String> list = new ArrayList<>(); Set<String> set = new HashSet<>();
+
+List har en ordning och du kan lätt hålla koll på vart du tryckt in dina värden.
+Set behöver inte ha ordning och får inte ha två av samma värden.
+LinkedHashSet är en implementation av Set som behåller ordningen.
+Treeset alltid sorterad, snabbast generellt.
+Set generellt sett snabbare än List
+
+Queue trycker in värdena i en kö där de sedan kan tittas på eller tas bort i den ordningen de står.
+Deque - Double-ended queue; Double linked list typ;
+KÖ - FIFO - FIRST IN FIRST OUT
+STACK - LIFO - LAST IN FIRST OUT
+Deque är bara användbart för att få fram första och sista värdet, finns ingen metod för att hitta något mitt i.
+ArrayDeque inte lika användbart längre efter jdk21 då ArrayList finns och har findFirst och findLast nu.
+
+Kan använda List utan <>, men då lagrar den alla sorters objektreferenser i sig. Inte bra att använda.
+
+Använda List.of() ger ett immutable List-objekt som har 0 element i sig och inte går att förändra.
+Den har dock fortfarande alla List-metoder, men de går inte att använda och kommer att kasta ett exception om den används.
+Du kan använda List.of(Objektreferens) för att lägga till ett objekt i listan, listan har då 1 värde i sig och går inte att ändras.
+
+Istället för lambdautryck med flera rader, skapa en ny metod och använd Klassnamn::Metod i parametrar.
+Alltid implementera equals och hashCode på nya klasser du ska skapa listor av. Ex. Student.
+
+HashMap vanligast men inte garanti på att den är sorterad. LinkedHashMap och TreeMap är sorterade.
+Map är separat från List/Queue/Set, eget interface.
+Map är snabbare än List och tar alltid lika lång tid att hitta objekt oavsett hur stor den är.
+
+När man kodar mot databaser så behöver man sällan använda Map och kommer mest använda List.

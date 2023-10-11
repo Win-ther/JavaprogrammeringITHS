@@ -1,0 +1,10 @@
+Kör switchar och loopar i metoder helst
+Mer än tre rader i metoder så kan det vara bra att se över om det inte är bättre att köra det i annan metod.
+kan skriva förkortningar för att kalla på metoder. t.ex printMultiplicationTable3() -> pMT3 -> p3. IntelliJ hjälper att skriva färdigt.
+//ToDo: Kan använda för att göra färdigt metoder temporärt så att man kan köra resten av programmet.
+Sträva för att ha 'pure' metoder, metoden ger alltid samma svar baserat på vad du skickar in i den. //Inget random i den.
+använd if-less programming så långt som möjligt i metoder. Math.max kan t.ex användas istället för en if-sats
+
+Returnera alltid en array som en kopia, Arrays.copyOf(array, array.length); Då en array bara innehåller referenser.
+Samma med Listor. returnera alltid listor med: Collections.unmodifiableList(listname);
+

@@ -1,0 +1,25 @@
+private = Endast kod i egna klassen kommer åt dem.
+protected = kod i subklasser kommer åt dem.
+
+abstract class = kod eller abstracta metoder
+interface = endast abstracta metoder
+
+Abstracta klasser kan endast ärvas en gång.
+Interface kan implementeras i klasser hur många som helst.
+
+interface har automatiskt public abstract framför alla metoder. Så behövs endast returtyp och metodsignatur ex. int method;
+
+Med java jdk21 så kan du använda objekt med switch.
+
+en record skapar upp konstruktor/get/toString/equals/hash automatiskt.
+En record klass är alltid immutable, går inte ändra på värdena i den, finns därför ingen setter.
+Kan inte ärva records heller då den alltid är final.
+Records kan inte ärva, men den kan implementera interfaces.
+
+@FunctionalInterface kan sättas över interface med en metod
+Metoden equals och hashCode räknas inte som den "en" metod som får finnas i ett funktionelltInterface
+Detta pga alla ärver från Object klassen och kommer då ha implementerade metoder
+
+Att skapa ett objekt av interface skapar en anonym klass, inom metoden du skapar den i.
+
+variabler/fält är alltid final och static i interface samt måste alltid initieras.

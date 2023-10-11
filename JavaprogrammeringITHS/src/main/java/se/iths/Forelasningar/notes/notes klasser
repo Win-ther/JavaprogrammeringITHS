@@ -1,0 +1,28 @@
+Rightclick on file and split to have both classes on screen at same time.
+Lokala variabler(variabler i en metod) måste initialiseras.
+Variabler i klasser heter fält.
+Fält (variabler utanför en metod) behöver inte initialiseras utan får ett defaulvärde
+
+Inga statiska metoder i klasser, objektet vi har skapat måste veta vilken metoden den ska kalla på
+Är den statisk så pekar den alltid på samma metod och inte objektets metod.
+!static == instans metod/variabel
+alt+insert för att komma åt generera utan att högerklicka på klassen
+
+standard getMetod för boolean ska vara isStarted istället.
+genereras automatiskt för booleans vid generation av get/set -ters
+
+this(); //Kör defaultkonstruktorn först och därefter den konstruktorn man anropat.
+Måste ligga på första raden.
+
+No setters == Immutable object //Gör om fält till final för att förhindra setters senare
+Kan inte ändra på fälten i skapat objekt efter objektet skapelse
+Kan inte köra this(); om fält är final
+
+Kan man använda Immutable klasser så är det bra.
+Funktionell programmering vill man att allt ska vara immutable.
+
+Man kan göra privata konstruktorer, då kan man dock inte göra några objekt av klassen.
+Används i t.ex Math, då de inte vill att du ska kunna skapa ett objekt av Math.
+
+Klassnamn ska vara substantiv, inte lägga till saker som Manager eller Data till klassnamnet då det inte tillför något riktigt
+Inte en bokstav och använd bra beskrivande ord för vad det är för något, inte förkortningar.

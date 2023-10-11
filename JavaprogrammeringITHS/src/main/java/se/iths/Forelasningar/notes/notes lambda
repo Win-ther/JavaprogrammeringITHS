@@ -1,0 +1,8 @@
+Att skapa ett objekt av interface skapar en anonym klass, inom metoden du skapar den i.
+Går sålänge det finns en metod.
+Går att byta ut anonyma klass-koden till ett lambdauttryck ->
+Rekommenderas att bara ha ett statement med lambda.
+Går att göra med interfaces med metod som tar parametrar.
+Istället för lambda -> går det ofta att använda Metodutryck t.ex Integer::sum;
+
+Om flera rader i lambdauttryck, gör metod för att slippa block

@@ -1,0 +1,18 @@
+CTRL+ALT+L //Formattering enligt best practice
+
+float värde behöver ha f, tex. float f = 20.50f; Annars tolkas som double.
+float snabbare och tar mindre utrymme än double. Kan dock lagra mindre i float. Double används som standard om inte angivet med f, se ovan.
+Ovan gäller för Long typen, behöver dock lägga till L istället för F. Annars tolkas som int
+
+var istället för statisk variabel bestämmer typen, tex. var v = 20.50 tolkas som double automatiskt.
+var används för att förkorta långa variabeltyper.
+
+byte wrap = 127; wrap = (byte) (wrap+1); // Går runt till minsta tal, -128.
+Integer.MAX_VALUE && Integer.MIN_VALUE //Största och minsta tal möjligt i en INT. Går att tilldela istället för att skriva siffror.
+
+Om gör final variabel, namnge inte med camelCase, namnge med SNAKE_CASE
+
+Lagra aldrig pengar i float/double. Lagra ören i int genom att multiplicera med 100. t.ex 20.50 blir 2050.
+Eller använd variabel BigDecimal för att lagra pengar. t.ex. BigDecimal price = new BigDecimal("20.50");
+
+// dokumentera rad /* dokumentera block */ /** Javadoc /**

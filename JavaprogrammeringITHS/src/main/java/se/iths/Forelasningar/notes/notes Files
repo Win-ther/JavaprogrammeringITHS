@@ -1,0 +1,23 @@
+java.nio.file.Path bättre än java.io.File
+io = input/output
+nio = nonblocking input/output
+Bör bara använda java.nio.file.Path, java.io.File finns bara kvar för äldre projekt.
+String homeFolder = System.getProperty("user.home"); hittar hem-filvägen för att spara oberoende på vad för operativsystem.
+
+Files.readString(path) används bara för några MB stora filer, inte alldeles för stora filer.
+För att läsa ISO-filer, så behöver man skriva StandardCharSets.ISO_8859_1 i readString-metoden.
+
+Kan använda streams för att läsa filer.
+
+Stream<String> lines = Files.lines(path); Läser in rad för rad i filen till en Stream av String.
+
+CSV-filer. För att använda komma i text så behöver antingen du använda citat-tecken "" eller använda ; som separerare istället för , .
+
+.trim för att tabort mellanslag/whitespaces som råkat komma med i csv-fil
+
+Effektivare att spara binärt, tar mindre minne. Gäller att man vet vad man läser för något.
+.bmp är exempel på binär lagring på bilder.
+
+ObjectOutputStreams används inte så mycket längre, mer viktigt med läsbarhet.
+
+Json

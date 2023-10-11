@@ -1,0 +1,16 @@
+Returnera Optional<dittobjekt> för att förhindra nullPointerException
+
+
+Kan inte göra booleanska operatörer på generiska metoder.
+Kan dock skriva t.ex:
+public static <T extends Number> T max(T x, T y){
+    return x.intValue() > y.intValue ? x : y;
+}
+Då går det endast att skicka in nummer-värden, men då fungerar det att använda booleanska operatörer.
+
+? = wildcard type
+? används när du inte vet vad för typ du ska skicka in till metod som tar en Collection, när du skapar metoden.
+Collection<?> != Collection<Object>
+
+Begränsa typer med t.ex: Collection<? extends CharSequence> - tillåter bara strängar some exempel
+

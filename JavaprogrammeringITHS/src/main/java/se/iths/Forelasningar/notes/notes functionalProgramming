@@ -1,0 +1,14 @@
+Färre buggar i program än objektorienterad programmering.
+Mindre komplext, mer förutsägbart och lättare att testa.
+
+Kan typ göra metoder till variabler. t.ex
+java.util.function.Function<String, String> function = s -> s.toLowerCase();
+Måste då måste man skriva .apply på den för att få det att fungera. function.apply("TeSt");
+
+Pure function = funktion där returvärdet endast påverkas av parametrarna.
+Försöka hålla så många funktioner som möjligt Pure.
+
+Higher-order functions = funktion som kan ta andra funktioner eller returnera andra funktioner.
+För att använda variabel i lambda så måste den vara final, antingen markerad med final eller så länge den inte används igen.
+Kan ändra på variabeln om man använder referenstyper istället, en array t.ex. Ändrar då på platsen i arrayen och det går bra.
+Går också i egna objekt som är mutable.

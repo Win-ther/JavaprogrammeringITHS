@@ -1,0 +1,37 @@
+Kan använda == på String om texten blivit definerad tidigare i programmet.
+
+CompactString på inte specialtecken, tar halva minne av sträng som skulle innehålla specialtecken.
+
+. matchar allt utom \n
+\s matchar blankspace
+\d samma sak som [0-9] ex. gr[1-9]y == gr\dy
+\w samma sok som [A-Za-z0-9] ex. gr[a-z]y == gr\Wy
+För att matcha minustecken med a-z så behöver det vara först eller sist inom hakparanteserna
+
+^ matchar allt utom det som är efter^ ex gr[^a-e]y kommer inte matcha gr[a-e]y.
+
+^ i början av utrycket betyder att resten av utrycket ska komma i början av ordet
+$ i slutet av utrycket betyder att resten av utrycket ska komma i slutet av ordet
+ex ^gr\wy$ = matchar endast om detta ordet är det enda som existerar i strängen.
+
+\b matchar bara ordet och ignorerar blankslag/tabb
+
+{m,n} används för att matcha ett ord m-n gånger ex (dog){0,1} (cat){2}
+
+\n = backreference
+\n matchar regex innan \n flera gånger i rad ex (dog)\1 matchar med dogdog
+
+? 0-1gånger greedy
++ 1-n gånger greedy
+* 0-n gånger greedy
+
+frågetecken efter tecken gör dem Lazy vilket innebär kortare matchningar
+ex.
+?? 0-1 gånger lazy
++? 1-n gånger lazy
+*? 0-n gånger lazy
+
+(\bid\b).*\b\1\b matchar allt mellan id - sista id i texten.
+
+
+Matcher förbrukas när den skrivits ut en gång, måste initiera den igen
